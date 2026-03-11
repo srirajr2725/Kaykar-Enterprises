@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Shield, PhoneCall } from 'lucide-react';
+import { Menu, X, PhoneCall } from 'lucide-react';
 import './Navbar.css';
+import logoImg from '../assets/logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
     <header className="navbar glass-panel">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <Shield className="logo-icon" size={28} />
+          <img src={logoImg} alt="Kaykar Enterprises Logo" className="logo-image" />
           <span>KAYKAR</span>
         </Link>
         

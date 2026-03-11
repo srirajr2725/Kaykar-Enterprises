@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Target, Shield, Users, Award } from 'lucide-react';
 import './About.css';
 import cctvImg from '../assets/cctv.png';
+import logoImg from '../assets/logo.svg';
 
 const About = () => {
   const fadeIn = {
@@ -15,11 +16,19 @@ const About = () => {
     <div className="about-page">
       {/* Page Header */}
       <section className="page-header text-center">
+        <motion.img 
+          src={logoImg} 
+          alt="Kaykar Logo" 
+          style={{ height: '80px', width: 'auto', borderRadius: '16px', marginBottom: '1.5rem' }}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        />
         <motion.h1
           className="section-title"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           About <span className="gradient-text">Kaykar Enterprises</span>
         </motion.h1>

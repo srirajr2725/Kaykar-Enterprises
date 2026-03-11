@@ -1,12 +1,14 @@
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Instagram, CheckCircle2 } from 'lucide-react';
 import './Footer.css';
+import logoImg from '../assets/logo.svg';
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-brand">
+          <img src={logoImg} alt="Kaykar Logo" style={{ height: '48px', width: 'auto', borderRadius: '8px', marginBottom: '16px' }} />
           <h3 className="gradient-text">KAYKAR ENTERPRISES</h3>
           <p className="text-muted">Professional CCTV & Networking Services prioritizing security and modern connectivity solutions for homes and businesses.</p>
           <div className="established-badge">
