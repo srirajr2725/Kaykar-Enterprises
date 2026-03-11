@@ -1,0 +1,119 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  animation: fadeIn 0.5s ease-out;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo-icon {
+  color: var(--primary);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.navbar-links a:not(.nav-cta) {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:not(.nav-cta):hover,
+.navbar-links a.active-link {
+  color: var(--primary);
+}
+
+.navbar-links a:not(.nav-cta)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.navbar-links a.active-link::after,
+.navbar-links a:not(.nav-cta):hover::after {
+  width: 100%;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.main-content {
+  min-height: calc(100vh - 200px);
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 24px;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.4s ease;
+    box-shadow: var(--shadow-md);
+  }
+
+  .navbar-links.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .nav-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

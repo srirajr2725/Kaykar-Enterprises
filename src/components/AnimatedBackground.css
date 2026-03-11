@@ -1,0 +1,59 @@
+.animated-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+  background-color: var(--bg-color);
+}
+
+.animated-bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+  background: var(--bg-color);
+}
+
+/* Mesh Gradient Animation */
+.ultra-mesh {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(37, 99, 235, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.15), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(244, 63, 94, 0.05), transparent 25%);
+  animation: meshFlow 20s ease-in-out infinite alternate;
+  filter: blur(60px);
+}
+
+@keyframes meshFlow {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Ultra UI Grid Overlay */
+.ultra-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+}
