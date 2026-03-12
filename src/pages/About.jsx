@@ -39,7 +39,7 @@ const About = () => {
           transition={{ delay: 0.2 }}
           style={{ maxWidth: '600px', margin: '0 auto' }}
         >
-          Your trusted partner for top-tier CCTV Service and Networking solutions since 2013.
+          Your trusted partner for top-tier CCTV Service, Solar Solutions, and Advanced Networking since 2013.
         </motion.p>
       </section>
 
@@ -52,7 +52,7 @@ const About = () => {
               Founded on <strong>March 3, 2013</strong> by <strong>K S Praveen Kumar</strong>, Kaykar Enterprises embarked on a mission to simplify and secure the lives and businesses of the Gobi community.
             </p>
             <p className="mb-4">
-              Over the years, we have evolved with the ever-changing landscape of security technology and network infrastructure. Our team is committed to providing not just hardware, but complete peace of mind through meticulously planned CCTV installations and robust networking systems.
+              Over the years, we have evolved with the ever-changing landscape of security technology and network infrastructure. Our team is committed to providing not just hardware, but complete peace of mind through meticulously planned CCTV installations, eco-friendly solar-powered solutions, and robust networking systems.
             </p>
             <div className="owner-badge glass-panel mt-8">
               <div className="owner-info">
@@ -93,7 +93,7 @@ const About = () => {
           <motion.div className="value-card glass-panel" {...fadeIn} transition={{ delay: 0.3 }}>
             <Target size={40} className="icon-primary mb-4" />
             <h3>Innovation</h3>
-            <p className="text-muted">Staying ahead of the technological curve to offer the most advanced networking and CCTV solutions.</p>
+            <p className="text-muted">Staying ahead of the technological curve to offer the most advanced Networking and Solar CCTV solutions.</p>
           </motion.div>
           <motion.div className="value-card glass-panel" {...fadeIn} transition={{ delay: 0.4 }}>
             <Users size={40} className="icon-primary mb-4" />

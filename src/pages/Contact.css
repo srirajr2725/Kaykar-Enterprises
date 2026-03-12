@@ -5,7 +5,7 @@
 
 /* Simple Header Section */
 .simple-header {
-  padding: 80px 20px 40px;
+  padding: 60px 20px 0px;
   background: var(--bg-color);
 }
 
@@ -13,6 +13,10 @@
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
   margin-bottom: 0;
+}
+
+.contact-main-section.section {
+  padding-top: 20px;
 }
 
 /* Main Content Layout */
