@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
-import { Camera, Router, ShieldCheck, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+import { Camera, Router, ShieldCheck, Zap, ArrowRight, CheckCircle, Sun } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import cctvImg from '../assets/cctv.png';
 import networkImg from '../assets/network.png';
+import solarCctvImg from '../assets/solar-cctv.png';
 
 const Home = () => {
   const fadeIn = {
@@ -26,6 +27,13 @@ const Home = () => {
       icon: <Router size={40} className="service-icon" />,
       image: networkImg,
       features: ["Structured Cabling", "Wi-Fi Setup", "Router Configuration", "Troubleshooting"]
+    },
+    {
+      title: "Solar-Powered CCTV",
+      description: "Eco-friendly security solutions for remote locations without power access. Fully autonomous and reliable.",
+      icon: <Sun size={40} className="service-icon" />,
+      image: solarCctvImg,
+      features: ["Standalone Operation", "Battery Backup", "4G/5G Connectivity", "Weatherproof"]
     }
   ];
 
